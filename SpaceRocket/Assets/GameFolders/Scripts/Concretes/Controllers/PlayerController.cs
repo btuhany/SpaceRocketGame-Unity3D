@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Inputs;
+using Movements;
 namespace Controllers
 {
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] float EnginePower = 2f;
         
-        Rigidbody _rigidbody;
+        
         DefaultInput _input;
+        Mover _mover;
 
         bool _isEngineUp;
 
         private void Awake()
         {
-            _rigidbody= GetComponent<Rigidbody>();
+            _mover = new Mover(GetComponent<Rigidbody>());
             _input = new DefaultInput();
         }
         private void Update()
@@ -29,8 +31,8 @@ namespace Controllers
         {
             if(_isEngineUp)
             {
+                _mover.RelativeForceUp(EnginePower);
                 
-                _rigidbody.AddForce(Vector3.up * Time.deltaTime * EnginePower);
             }
                
         }
