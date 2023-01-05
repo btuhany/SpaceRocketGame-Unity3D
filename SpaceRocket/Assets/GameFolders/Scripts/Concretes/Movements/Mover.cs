@@ -14,8 +14,13 @@ namespace Movements
 
        public void RelativeForceUp(float Force)
         {
+            
             _rigidbody.AddRelativeForce(Vector3.up * Time.deltaTime * Force);
+            
+
         }
+
+      
     }
 }
 

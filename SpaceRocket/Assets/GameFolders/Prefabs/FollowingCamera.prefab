@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 4.08, z: 18.76}
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 8.356, z: 12.64}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
