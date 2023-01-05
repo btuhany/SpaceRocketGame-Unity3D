@@ -1032,40 +1032,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: _heatSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatDecreaseSpeed
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _enginePower
-      value: 1290
-      objectReference: {fileID: 0}
-    - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: _rotateSpeed
-      value: 700
+      value: 1350
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _engineRotatePower
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555439881621727564, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555439881621727564, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: clearBehavior
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819604764880606299, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: m_Intensity
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9100084480093141612, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_RootOrder
