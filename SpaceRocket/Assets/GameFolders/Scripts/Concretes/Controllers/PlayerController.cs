@@ -9,6 +9,7 @@ namespace Controllers
     {
         [SerializeField] float EnginePower = 2f;
         [SerializeField] float RotateSpeed;
+        [SerializeField] float EnginePowerWhenRotating;
 
         DefaultInput _input;
         Mover _mover;
@@ -25,7 +26,6 @@ namespace Controllers
         }
         private void Update()
         {
- 
             if (_input.IsEngineUp)
                 _isEngineOn = true;
             else
@@ -39,16 +39,12 @@ namespace Controllers
             {
                 _mover.RelativeForceUp(EnginePower);     
             }
-            
-                
-            
-            
-               
+
                 _rotator.RotateZ(_rotateLeftRight, RotateSpeed);
+                _mover.ForceUpIfRotates(_rotateLeftRight, EnginePowerWhenRotating);
                 _rotator.RotateX(_rotateFrontBack, RotateSpeed);
-            
-            
-           
+                _mover.ForceUpIfRotates(_rotateFrontBack, EnginePowerWhenRotating);
+
         }
 
     }

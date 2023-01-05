@@ -16,22 +16,25 @@ namespace Movements
 
         public void RotateZ(float RotateDirection, float Force)
         {
-            
+            //ControlRotation(RotateDirection);
             //_gameObject.transform.Rotate(Vector3.forward * Time.deltaTime * RotateDirection * Force);
             _rigidbody.AddRelativeTorque(Vector3.forward * Time.deltaTime * RotateDirection * Force);
+           
         }
         public void RotateX(float RotateDirection, float Force)
         {
-            
-            //_gameObject.transform.Rotate(Vector3.right * Time.deltaTime * RotateDirection * Force);
+            //ControlRotation(RotateDirection);
+            // _gameObject.transform.Rotate(Vector3.right * Time.deltaTime * RotateDirection * Force);
             _rigidbody.AddRelativeTorque(Vector3.right * Time.deltaTime * RotateDirection * Force);
+           
             
+
         }
 
 
-        void ControlRotation(float RotateDirection)
+        void ControlRotation(float rotatedirection)
         {
-            if(RotateDirection== 0)
+            if(rotatedirection== 0)
             {
                 _rigidbody.freezeRotation = true;
             }
@@ -41,6 +44,11 @@ namespace Movements
                
             }
 
+        }
+
+        void ControlRotate()
+        {
+           
         }
     }
 

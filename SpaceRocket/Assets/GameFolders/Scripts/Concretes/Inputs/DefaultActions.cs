@@ -72,7 +72,7 @@ namespace Inputs
                 {
                     ""name"": ""Z Axis"",
                     ""id"": ""14cf3b94-d9d0-4e82-afa4-86fc942778aa"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-0.2,maxValue=0.2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -105,7 +105,7 @@ namespace Inputs
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""e115fa76-4309-478d-a784-91d0cf79a74c"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-0.2,maxValue=0.2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
