@@ -8,14 +8,17 @@ namespace Particles
 {
     public class RocketParticles : MonoBehaviour
     {
-        PlayerController _player;
+        
         [SerializeField] ParticleSystem _fireUpParticle;
+        [SerializeField] ParticleSystem _overHeatFireParticle;
 
         public ParticleSystem FireUpParticle { get => _fireUpParticle; set => _fireUpParticle = value; }
+        public ParticleSystem OverHeatFireParticle { get => _overHeatFireParticle; set => _overHeatFireParticle = value; }
 
-        private void Awake()
+        private void OnEnable()
         {
-            _player= GetComponent<PlayerController>();
+            _fireUpParticle.Stop();
+            _overHeatFireParticle.Stop();
         }
         public void PlayIfStopped(ParticleSystem _particle)
         {

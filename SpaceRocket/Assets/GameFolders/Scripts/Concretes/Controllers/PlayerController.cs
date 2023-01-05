@@ -33,7 +33,7 @@ namespace Controllers
         }
         private void Update()
         {
-            Debug.Log(_overheat.IsOverHeated);
+            
             
             if (_input.IsEngineUp && _overheat.IsOverHeated)
             {

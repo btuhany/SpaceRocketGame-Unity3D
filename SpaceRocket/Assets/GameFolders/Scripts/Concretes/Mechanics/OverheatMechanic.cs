@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Particles;
 namespace Mechanics 
 {
     public class OverheatMechanic : MonoBehaviour
@@ -9,11 +10,14 @@ namespace Mechanics
         [SerializeField] float _currentHeat;
         [SerializeField] float _heatIncreaseSpeed;
         [SerializeField] float _heatDecreaseSpeed;
-       
 
+        RocketParticles _particles;
         public bool IsOverHeated => _currentHeat > _maxHeat;
-        
 
+        private void Awake()
+        {
+            _particles = GetComponent<RocketParticles>();
+        }
         public void HeatIncrease()
         {
             _currentHeat += _heatIncreaseSpeed;
@@ -30,8 +34,8 @@ namespace Mechanics
         }
         public void OverHeating()
         {
-            _currentHeat += _heatIncreaseSpeed*1.2f;
-            HeatDecrease();
+            _currentHeat += _heatIncreaseSpeed*(_heatIncreaseSpeed-_heatDecreaseSpeed);
+            _particles.PlayIfStopped(_particles.OverHeatFireParticle);
         }
     }
 }
