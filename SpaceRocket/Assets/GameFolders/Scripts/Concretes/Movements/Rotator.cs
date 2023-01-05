@@ -26,9 +26,6 @@ namespace Movements
             //ControlRotation(RotateDirection);
             // _gameObject.transform.Rotate(Vector3.right * Time.deltaTime * RotateDirection * Force);
             _rigidbody.AddRelativeTorque(Vector3.right * Time.deltaTime * RotateDirection * Force);
-           
-            
-
         }
 
 
