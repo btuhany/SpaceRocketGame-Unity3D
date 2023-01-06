@@ -11,9 +11,11 @@ namespace Particles
         
         [SerializeField] ParticleSystem _fireUpParticle;
         [SerializeField] ParticleSystem _overHeatFireParticle;
+        [SerializeField] ParticleSystem _overHeatStartParticle;
 
         public ParticleSystem FireUpParticle { get => _fireUpParticle; set => _fireUpParticle = value; }
-        public ParticleSystem OverHeatFireParticle { get => _overHeatFireParticle; set => _overHeatFireParticle = value; }
+        public ParticleSystem OverHeatingParticle { get => _overHeatFireParticle; set => _overHeatFireParticle = value; }
+        public ParticleSystem OverHeatStartParticle { get => _overHeatStartParticle; set => _overHeatStartParticle = value; }
 
         private void OnEnable()
         {

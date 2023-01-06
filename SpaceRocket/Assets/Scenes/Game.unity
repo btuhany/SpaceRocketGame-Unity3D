@@ -758,11 +758,6 @@ Transform:
   m_Father: {fileID: 309111926}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1325913681 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-  m_PrefabInstance: {fileID: 4627634054475552573}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1514235803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,48 +1041,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatDecreaseSpeed
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.1
+      value: 0.12
       objectReference: {fileID: 0}
-    - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: _enginePower
-      value: 1350
-      objectReference: {fileID: 0}
-    - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: _engineRotatePower
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: looping
+    - target: {fileID: 6957969228525795120, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.28515485
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.4504821
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.6792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 3748589361989813284, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6272277985233129391, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: clearBehavior
+    - target: {fileID: 6957969228525795122, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7841929853460953229, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
-      propertyPath: _overHeatFireParticle
-      value: 
-      objectReference: {fileID: 1325913681}
+    - target: {fileID: 6957969229257637167, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8819604764880606299, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_Intensity
       value: 0

@@ -40,6 +40,7 @@ namespace Controllers
                 _isEngineOn = false;
                 _overheat.OverHeating();
                 _particles.StopIfPlaying(_particles.FireUpParticle);
+                Debug.Log("EngineUp,Overheat");
 
             }
             else if (_input.IsEngineUp && !_overheat.IsOverHeated)
@@ -47,12 +48,14 @@ namespace Controllers
                 _isEngineOn = true;
                 _overheat.HeatIncrease();
                 _particles.PlayIfStopped(_particles.FireUpParticle);
+                Debug.Log("EngineUp,HeatIncreases");
             }
             else
             {
                 _isEngineOn = false;
                 _overheat.HeatDecrease();
                 _particles.StopIfPlaying(_particles.FireUpParticle);
+                Debug.Log("EngineDown,HeatDecreases");
 
             }
                 
