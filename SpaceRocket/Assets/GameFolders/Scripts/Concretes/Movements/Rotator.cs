@@ -7,6 +7,7 @@ namespace Movements
     {
         Rigidbody _rigidbody;
         GameObject _gameObject;
+        
 
         public Rotator(GameObject gameObject)
         {
