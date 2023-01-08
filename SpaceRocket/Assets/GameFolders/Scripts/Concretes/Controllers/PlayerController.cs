@@ -5,6 +5,7 @@ using Inputs;
 using Movements;
 using Mechanics;
 using Particles;
+using Managers;
 
 namespace Controllers
 {
@@ -20,6 +21,7 @@ namespace Controllers
         OverheatMechanic _overheat;
         RocketParticles _particles;
 
+        bool _canMove;
         bool _isEngineOn;
         float _rotateLeftRight;
         float _rotateFrontBack;
@@ -31,10 +33,21 @@ namespace Controllers
             _overheat = GetComponent<OverheatMechanic>();
             _particles = GetComponent<RocketParticles>();
         }
+        private void Start()
+        {
+            _canMove = true;
+        }
+        private void OnEnable()
+        {
+            GameManager.Instance.OnGameOver += HandleOnEventGameOver;
+        }
+        private void OnDisable()
+        {
+            GameManager.Instance.OnGameOver -= HandleOnEventGameOver;
+        }
         private void Update()
         {
-            
-            
+            if (!_canMove) return;
             if (_input.IsEngineUp && _overheat.IsOverHeated)
             {
                 _isEngineOn = false;
@@ -74,6 +87,15 @@ namespace Controllers
                 _mover.ForceUpIfRotates(_rotateLeftRight, _engineRotatePower);
                 _rotator.RotateX(_rotateFrontBack, _rotateSpeed);
                 _mover.ForceUpIfRotates(_rotateFrontBack, _engineRotatePower);
+
+        }
+        private void HandleOnEventGameOver()
+        {
+            _canMove= false;
+            _isEngineOn= false;
+            _rotateLeftRight = 0f;
+            _rotateFrontBack = 0f;  
+            _overheat.SetCurrentHeat(0);
 
         }
 
