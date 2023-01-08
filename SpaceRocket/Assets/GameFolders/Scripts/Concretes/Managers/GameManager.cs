@@ -55,6 +55,17 @@ namespace Managers
         {
             yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + levelIndex);
         }
+
+
+        public void LoadMenuScene()
+        {
+            StartCoroutine(LoadMenuSceneAsync());
+
+        }
+        IEnumerator LoadMenuSceneAsync()
+        {
+            yield return SceneManager.LoadSceneAsync("Menu");
+        }
         void Exit()
         {
             Debug.Log("Exit");
