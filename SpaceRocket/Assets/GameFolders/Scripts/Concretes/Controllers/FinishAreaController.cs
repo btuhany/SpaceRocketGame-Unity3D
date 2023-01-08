@@ -16,10 +16,8 @@ namespace Controllers
 
             if (_player == null) return;
 
-                Rigidbody _playerRb = _player.GetComponent<Rigidbody>();
-                _playerRb.constraints = RigidbodyConstraints.FreezeAll;
-
-                _finishFireWorks.gameObject.SetActive(true);
+               _finishFireWorks.gameObject.SetActive(true);
+                GameManager.Instance.LevelCompleted();
 
                 
                 

@@ -20,6 +20,7 @@ namespace Controllers
         Rotator _rotator;
         OverheatMechanic _overheat;
         RocketParticles _particles;
+        Rigidbody _rb;
 
         bool _canMove;
         bool _isEngineOn;
@@ -27,7 +28,8 @@ namespace Controllers
         float _rotateFrontBack;
         private void Awake()
         {
-            _mover = new Mover(GetComponent<Rigidbody>());
+            _rb = GetComponent<Rigidbody>();
+            _mover = new Mover(_rb);
             _rotator = new Rotator(gameObject);
             _input = new DefaultInput();
             _overheat = GetComponent<OverheatMechanic>();
@@ -40,10 +42,12 @@ namespace Controllers
         private void OnEnable()
         {
             GameManager.Instance.OnGameOver += HandleOnEventGameOver;
+            GameManager.Instance.OnLevelCompleted += HandleOnEventLevelCompleted;
         }
         private void OnDisable()
         {
             GameManager.Instance.OnGameOver -= HandleOnEventGameOver;
+            GameManager.Instance.OnLevelCompleted -= HandleOnEventLevelCompleted;
         }
         private void Update()
         {
@@ -95,6 +99,19 @@ namespace Controllers
             _isEngineOn= false;
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;  
+            _overheat.SetCurrentHeat(0);
+
+        }
+        /// <summary>
+        /// Birleþtirilebilir
+        /// </summary>
+        private void HandleOnEventLevelCompleted()
+        {
+            _rb.constraints = RigidbodyConstraints.FreezeAll;
+            _canMove = false;
+            _isEngineOn = false;
+            _rotateLeftRight = 0f;
+            _rotateFrontBack = 0f;
             _overheat.SetCurrentHeat(0);
 
         }
