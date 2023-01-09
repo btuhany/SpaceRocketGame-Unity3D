@@ -36,7 +36,9 @@ namespace Managers
             //{
             //    OnGameOver.Invoke();
             //}
+
             OnGameOver?.Invoke();
+
 
         }
         public void LevelCompleted()
