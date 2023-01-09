@@ -26,6 +26,9 @@ namespace Controllers
         bool _isEngineOn;
         float _rotateLeftRight;
         float _rotateFrontBack;
+
+        public bool CanMove=> _canMove;
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
@@ -95,12 +98,7 @@ namespace Controllers
         }
         private void HandleOnEventGameOver()
         {
-            _canMove= false;
-            _isEngineOn= false;
-            _rotateLeftRight = 0f;
-            _rotateFrontBack = 0f;  
-            _overheat.SetCurrentHeat(0);
-
+            ResetandStop();
         }
         /// <summary>
         /// Birleþtirilebilir
@@ -108,12 +106,17 @@ namespace Controllers
         private void HandleOnEventLevelCompleted()
         {
             _rb.constraints = RigidbodyConstraints.FreezeAll;
+            ResetandStop();
+
+        }
+
+        private void ResetandStop()
+        {
             _canMove = false;
             _isEngineOn = false;
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;
             _overheat.SetCurrentHeat(0);
-
         }
 
     }

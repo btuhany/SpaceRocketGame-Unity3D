@@ -11,7 +11,7 @@ namespace Mechanics
         [SerializeField] float _heatIncreaseSpeed;
         [SerializeField] float _heatDecreaseSpeed;
 
-        bool isOverheatStartedAlready;
+        bool _isOverheatStartedAlready;
         RocketParticles _particles;
         private void Awake()
         {
@@ -31,7 +31,7 @@ namespace Mechanics
         {
             
             _currentHeat += _heatIncreaseSpeed;
-            isOverheatStartedAlready = false;
+            _isOverheatStartedAlready = false;
             
         }
 
@@ -43,10 +43,10 @@ namespace Mechanics
 
         public void OverHeating()
         {
-            if (!isOverheatStartedAlready)
+            if (!_isOverheatStartedAlready)
             {
                 _particles.OverHeatStartParticle.gameObject.SetActive(true);
-                isOverheatStartedAlready = true;
+                _isOverheatStartedAlready = true;
             }
 
             _currentHeat += _heatIncreaseSpeed*1.2f;
