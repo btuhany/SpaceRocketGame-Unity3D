@@ -66,7 +66,7 @@ namespace Managers
         {
             yield return SceneManager.LoadSceneAsync("Menu");
         }
-        void Exit()
+        public void Exit()
         {
             Debug.Log("Exit");
             Application.Quit();
