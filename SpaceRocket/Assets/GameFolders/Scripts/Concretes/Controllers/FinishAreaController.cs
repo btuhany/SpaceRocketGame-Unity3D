@@ -14,7 +14,7 @@ namespace Controllers
         {
             PlayerController _player = collision.gameObject.GetComponent<PlayerController>();
 
-            if (_player == null || !_player.CanMove) return;
+            if (!(_player == null) && !_player.CanMove) return;
 
                _finishFireWorks.gameObject.SetActive(true);
                 GameManager.Instance.LevelCompleted();
