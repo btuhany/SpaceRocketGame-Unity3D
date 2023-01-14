@@ -19,18 +19,6 @@ namespace Controllers
                _finishFireWorks.gameObject.SetActive(true);
                 GameManager.Instance.LevelCompleted();
 
-                
-                
-
-
-            if (collision.GetContact(0).normal.y<-0.75)
-            {
-                Debug.Log("Degdi");
-            }
-            else
-            {
-                GameManager.Instance.GameOver();
-            }
         }
     }
 }
