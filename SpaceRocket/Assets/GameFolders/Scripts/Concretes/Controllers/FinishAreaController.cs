@@ -16,8 +16,11 @@ namespace Controllers
 
             if (!(_player == null) && !_player.CanMove) return;
 
-               _finishFireWorks.gameObject.SetActive(true);
+            if (collision.GetContact(0).normal.y<-0.60)
+            {
+                _finishFireWorks.gameObject.SetActive(true);
                 GameManager.Instance.LevelCompleted();
+            }
 
         }
     }
