@@ -1,39 +1,64 @@
 using Cinemachine;
+using Controllers;
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class StartCamera : MonoBehaviour
+namespace Managers
 {
-    [SerializeField] Transform _inGameCamera;
-    [SerializeField] float _transitionSpeed;
-    bool _cameraTransition;
-    bool _cameraTransitionFinished;
-
-    private void Update()
+    public class StartCamera : MonoBehaviour
     {
-        if(Input.anyKeyDown && !_cameraTransitionFinished)
+        [SerializeField] Transform _inGameCamera;
+        [SerializeField] float _transitionSpeed;
+        [SerializeField] float _distanceLevel;
+        [SerializeField] PlayerController _player;
+        bool _cameraTransition;
+        bool _isCameraTransitionFinished;
+        public static StartCamera Instance { get; private set; }
+        public bool IsCameraTransitionFinished { get => _isCameraTransitionFinished; set => _isCameraTransitionFinished = value; }
+
+        //private void Awake()
+        //{
+        //    SingletonThisGameObject();
+        //}
+        //private void SingletonThisGameObject()
+        //{
+        //    if (Instance == null)
+        //    {
+        //        Instance = this;
+
+        //    }
+        //    else
+        //    {
+        //        Destroy(this.gameObject);
+        //    }
+        //}
+        private void Update()
         {
-            _cameraTransition = true;
-        }
-        if(_cameraTransition)
-        {
-            Vector3 startPosition = Vector3.Lerp(transform.position, _inGameCamera.position, _transitionSpeed * Time.deltaTime);
-            transform.position = startPosition;
-            if(Vector3.one.magnitude*0.5f > (transform.position-_inGameCamera.position).magnitude)
+            if (_isCameraTransitionFinished)
             {
-                Debug.Log("tamamdir");
-                _cameraTransitionFinished = true;
-                _cameraTransition= false;
+                gameObject.GetComponent<CinemachineBrain>().enabled = true;
+                Destroy(gameObject.GetComponent<StartCamera>());
+            }
+            if (Input.anyKeyDown && !_isCameraTransitionFinished)
+            {
+                _cameraTransition = true;
+                _player.CanMove = false;
+            }
+            if (_cameraTransition)
+            {
+                Vector3 startPosition = Vector3.Lerp(transform.position, _inGameCamera.position, _transitionSpeed * Time.deltaTime);
+                transform.position = startPosition;
+                if (Vector3.one.magnitude * _distanceLevel > (transform.position - _inGameCamera.position).magnitude)
+                {
+                    Debug.Log("Camera transition finished");
+                    _isCameraTransitionFinished = true;
+                    _cameraTransition = false;
+                    _player.CanMove = true;
+                }
             }
         }
-        if (_cameraTransitionFinished)
-        {
-            gameObject.GetComponent<CinemachineBrain>().enabled = true;
-            Destroy(gameObject.GetComponent<StartCamera>());
-        }
-
 
     }
-
 }
+

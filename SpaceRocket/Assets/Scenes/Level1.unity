@@ -659,6 +659,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1306b0454bf03f429593e540646839e, type: 3}
+--- !u!114 &1426857935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1837783349093464738, guid: 49109e8053254964da0fe9b12086b022, type: 3}
+  m_PrefabInstance: {fileID: 7888533804247109405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1905d8405e0e9b6489c3903ed649a82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1488718405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,6 +819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[GameManager]'
       objectReference: {fileID: 0}
+    - target: {fileID: 851274914455229493, guid: f2d22aeeb65d97541828666ff5a44da4, type: 3}
+      propertyPath: _startCamera
+      value: 
+      objectReference: {fileID: 1426857935}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d22aeeb65d97541828666ff5a44da4, type: 3}
 --- !u!1001 &1963718347979470342
@@ -1155,6 +1170,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9100084480093141612, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
   m_PrefabInstance: {fileID: 4627634054475552573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4499472308527377749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+  m_PrefabInstance: {fileID: 4627634054475552573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad19d9559557bc449d9f6c5e493fdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4627634054475552573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1162,6 +1188,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 864641341256466315, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1146756603460037410, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1171,6 +1201,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1425051269840402370, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012572749942443140, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1193,6 +1227,10 @@ PrefabInstance:
     - target: {fileID: 7465193514914099745, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_Constraints
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819604764880606299, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9100084480093141612, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_RootOrder
@@ -1252,9 +1290,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1837783349093464738, guid: 49109e8053254964da0fe9b12086b022, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 4499472308527377749}
+    - target: {fileID: 1837783349093464738, guid: 49109e8053254964da0fe9b12086b022, type: 3}
       propertyPath: _inGameCamera
       value: 
       objectReference: {fileID: 1963718347979470343}
+    - target: {fileID: 1837783349093464738, guid: 49109e8053254964da0fe9b12086b022, type: 3}
+      propertyPath: _distanceLevel
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837783349093464738, guid: 49109e8053254964da0fe9b12086b022, type: 3}
+      propertyPath: _transitionSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7888533804126986857, guid: 49109e8053254964da0fe9b12086b022, type: 3}
       propertyPath: m_RootOrder
       value: 0

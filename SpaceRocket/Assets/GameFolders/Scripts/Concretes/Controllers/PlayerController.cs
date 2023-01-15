@@ -27,7 +27,17 @@ namespace Controllers
         float _rotateLeftRight;
         float _rotateFrontBack;
 
-        public bool CanMove=> _canMove;
+        public bool CanMove
+        {
+            get
+            {
+                return _canMove;
+            }
+            set
+            {
+                _canMove = value;
+            }
+        }
 
         private void Awake()
         {
@@ -55,6 +65,10 @@ namespace Controllers
         private void Update()
         {
             if (!_canMove) return;
+            if (_input.Restart)
+            {
+                GameManager.Instance.LoadLevelScene(0);
+            }
             if (_input.IsEngineUp && _overheat.IsOverHeated)
             {
                 _isEngineOn = false;

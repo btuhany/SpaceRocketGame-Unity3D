@@ -56,6 +56,10 @@ namespace Managers
         IEnumerator LoadLevelSceneAsync(int levelIndex)
         {
             yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + levelIndex);
+            //if (levelIndex == 0)
+            //{
+            //    StartCamera.Instance.IsCameraTransitionFinished= true;
+            //}
         }
 
 

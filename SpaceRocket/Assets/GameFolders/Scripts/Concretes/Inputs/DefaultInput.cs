@@ -12,6 +12,7 @@ namespace Inputs
         public bool IsEngineUp { get; private set; }
         public float RotateLeftRight { get; private set; }
         public float RotateFrontBack { get; private set; }
+        public bool Restart { get; private set; }
         public DefaultInput()
         {
             _input= new DefaultActions();
@@ -19,6 +20,7 @@ namespace Inputs
             _input.Rocket.EngineUp.performed += context => IsEngineUp = context.ReadValueAsButton();
             _input.Rocket.RotateZ.performed += context => RotateLeftRight = context.ReadValue<float>();
             _input.Rocket.RotateX.performed += context => RotateFrontBack = context.ReadValue<float>();
+            _input.Rocket.Restart.performed += context => Restart = context.ReadValueAsButton();
             _input.Enable();
         }
     }
