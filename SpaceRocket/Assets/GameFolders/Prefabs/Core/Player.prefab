@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 9100084480093141612}
   - component: {fileID: 3387423462103117906}
   - component: {fileID: 2217279232293015088}
+  - component: {fileID: 3200758707169605948}
   - component: {fileID: 7841929853460953229}
   - component: {fileID: 7465193514914099745}
   m_Layer: 0
@@ -318,6 +319,20 @@ MonoBehaviour:
   _currentHeat: 0
   _heatIncreaseSpeed: 0.12
   _heatDecreaseSpeed: 0.2
+--- !u!114 &3200758707169605948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146756603460037410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce59dc2a9bddc64cb08f0f7ac92bf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalFuel: 0
+  _fuelDecreaseSpeed: 0
 --- !u!114 &7841929853460953229
 MonoBehaviour:
   m_ObjectHideFlags: 0

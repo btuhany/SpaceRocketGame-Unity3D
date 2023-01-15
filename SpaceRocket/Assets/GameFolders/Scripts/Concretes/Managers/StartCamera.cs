@@ -48,7 +48,9 @@ namespace Managers
             if (_cameraTransition)
             {
                 Vector3 startPosition = Vector3.Lerp(transform.position, _inGameCamera.position, _transitionSpeed * Time.deltaTime);
+                Quaternion startRotation = Quaternion.Lerp(transform.rotation, _inGameCamera.rotation, _transitionSpeed * Time.deltaTime);
                 transform.position = startPosition;
+                transform.rotation = startRotation;
                 if (Vector3.one.magnitude * _distanceLevel > (transform.position - _inGameCamera.position).magnitude)
                 {
                     Debug.Log("Camera transition finished");

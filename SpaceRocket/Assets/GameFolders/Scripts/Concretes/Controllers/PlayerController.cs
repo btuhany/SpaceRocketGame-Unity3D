@@ -21,6 +21,7 @@ namespace Controllers
         OverheatMechanic _overheat;
         RocketParticles _particles;
         Rigidbody _rb;
+        FuelMechanic _fuel;
 
         bool _canMove;
         bool _isEngineOn;
@@ -47,6 +48,7 @@ namespace Controllers
             _input = new DefaultInput();
             _overheat = GetComponent<OverheatMechanic>();
             _particles = GetComponent<RocketParticles>();
+            _fuel = GetComponent<FuelMechanic>();
         }
         private void Start()
         {
@@ -65,6 +67,7 @@ namespace Controllers
         private void Update()
         {
             if (!_canMove) return;
+            
             if (_input.Restart)
             {
                 GameManager.Instance.LoadLevelScene(0);
@@ -77,9 +80,10 @@ namespace Controllers
                 Debug.Log("EngineUp,Overheat");
 
             }
-            else if (_input.IsEngineUp && !_overheat.IsOverHeated)
+            else if (_input.IsEngineUp && !_overheat.IsOverHeated && !_fuel.IsFuelRanOut)
             {
                 _isEngineOn = true;
+                _fuel.DecreaseFuel();
                 _overheat.HeatIncrease();
                 _particles.PlayIfStopped(_particles.FireUpParticle);
                 Debug.Log("EngineUp,HeatIncreases");
@@ -98,7 +102,7 @@ namespace Controllers
         }
         private void FixedUpdate()
         {
-            if(_isEngineOn)
+            if (_isEngineOn && !_fuel.IsFuelRanOut)
             {
                 _mover.RelativeForceUp(_enginePower);
                 
@@ -130,8 +134,10 @@ namespace Controllers
             _isEngineOn = false;
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;
+            _particles.StopIfPlaying(_particles.FireUpParticle);
             _overheat.SetCurrentHeat(0);
         }
+
 
     }
 

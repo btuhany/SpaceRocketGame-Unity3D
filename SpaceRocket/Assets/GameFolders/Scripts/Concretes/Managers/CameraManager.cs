@@ -7,6 +7,7 @@ namespace Managers
     {
         [SerializeField] Transform _playerTransform;
         [SerializeField] private float _lerpTime;
+        [SerializeField] float _cameraLimitAtZ;
         private Vector3 _offset;
 
         private void Start()
@@ -17,9 +18,9 @@ namespace Managers
         private void LateUpdate()
         {
             Vector3 playerPositionFreezingZ = _playerTransform.position;
-            if (playerPositionFreezingZ.z >= 0)
+            if (playerPositionFreezingZ.z >= _cameraLimitAtZ)
             {
-                playerPositionFreezingZ.z = 0;
+                playerPositionFreezingZ.z = _cameraLimitAtZ;
             }
 
 

@@ -11,7 +11,7 @@ namespace Managers
     {
         [SerializeField] Vector3 _direction;
         [SerializeField] float _speed = 1f;
-        [SerializeField] float _factor;
+         float _factor;
 
         Vector3 _startPosition;
         
