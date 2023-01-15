@@ -1,3 +1,4 @@
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
@@ -13,7 +14,17 @@ namespace Mechanics
         public void DecreaseFuel()
         {
             _totalFuel = _totalFuel - _fuelDecreaseSpeed;
+            
             _totalFuel = Mathf.Max(_totalFuel, 0f);
+            FuelControl();
+
+        }
+        private void FuelControl()
+        {
+            if (_totalFuel == 0f)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 }
