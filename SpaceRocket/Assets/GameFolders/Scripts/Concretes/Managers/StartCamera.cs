@@ -36,15 +36,4 @@ public class StartCamera : MonoBehaviour
 
     }
 
-    private bool Waited(float duration)
-    {
-        if(Time.time>duration)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 }
