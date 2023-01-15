@@ -779,7 +779,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7191887291719841896, guid: e1306b0454bf03f429593e540646839e, type: 3}
       propertyPath: m_Value
-      value: 0.744
+      value: 46.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191887291719841896, guid: e1306b0454bf03f429593e540646839e, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7191887291719841896, guid: e1306b0454bf03f429593e540646839e, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -1415,7 +1419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 9999
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
