@@ -80,12 +80,12 @@ namespace Controllers
                 Debug.Log("EngineUp,Overheat");
 
             }
-            else if (_input.IsEngineUp && !_overheat.IsOverHeated && !_fuel.IsFuelRanOut)
+            else if (_input.IsEngineUp && !_overheat.IsOverHeated ) /*&& !_fuel.IsFuelRanOut*/
             {
                 _isEngineOn = true;
-                _fuel.DecreaseFuel();
                 _overheat.HeatIncrease();
                 _particles.PlayIfStopped(_particles.FireUpParticle);
+                _fuel.DecreaseFuel();
                 Debug.Log("EngineUp,HeatIncreases");
             }
             else
@@ -102,7 +102,7 @@ namespace Controllers
         }
         private void FixedUpdate()
         {
-            if (_isEngineOn && !_fuel.IsFuelRanOut)
+            if (_isEngineOn )  /*&& !_fuel.IsFuelRanOut*/
             {
                 _mover.RelativeForceUp(_enginePower);
                 
@@ -135,7 +135,7 @@ namespace Controllers
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;
             _particles.StopIfPlaying(_particles.FireUpParticle);
-            _overheat.SetCurrentHeat(0);
+            
         }
 
 

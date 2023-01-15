@@ -27,6 +27,9 @@ namespace Mechanics
             }
         }
 
+        public float MaxHeat { get => _maxHeat; set => _maxHeat = value; }
+        public float CurrentHeat { get => _currentHeat; set => _currentHeat = value; }
+
         public void HeatIncrease()
         {
             

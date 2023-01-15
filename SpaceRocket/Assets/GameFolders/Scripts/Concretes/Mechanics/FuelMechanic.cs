@@ -8,9 +8,12 @@ namespace Mechanics
 {
     public class FuelMechanic : MonoBehaviour
     {
-        [SerializeField] public float _totalFuel;
+        [SerializeField] private float _totalFuel;
         [SerializeField] float _fuelDecreaseSpeed;
         public bool IsFuelRanOut => _totalFuel == 0;
+
+        public float TotalFuel { get => _totalFuel; set => _totalFuel = value; }
+
         public void DecreaseFuel()
         {
             _totalFuel = _totalFuel - _fuelDecreaseSpeed;
