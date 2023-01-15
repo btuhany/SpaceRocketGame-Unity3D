@@ -60,6 +60,10 @@ namespace Mechanics
         public void SetCurrentHeat(float heat)
         {
             _currentHeat = heat;
+            if(heat>_maxHeat)
+            {
+                _particles.OverHeatStartParticle.gameObject.SetActive(true);
+            }
         }
 
     }
