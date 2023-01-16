@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 3387423462103117906}
   - component: {fileID: 2217279232293015088}
   - component: {fileID: 3200758707169605948}
+  - component: {fileID: 5877299879508248352}
   - component: {fileID: 7841929853460953229}
   - component: {fileID: 7465193514914099745}
   m_Layer: 0
@@ -333,6 +334,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _totalFuel: 100
   _fuelDecreaseSpeed: 0.2
+  _fuelDecreaseSpeedOutOfBoundaries: 0
+--- !u!114 &5877299879508248352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146756603460037410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9098b0822df134389733666f6c4ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xMax: 0
+  xMin: 0
+  yMax: 0
+  yMin: 0
+  zMax: 0
+  zMin: 0
 --- !u!114 &7841929853460953229
 MonoBehaviour:
   m_ObjectHideFlags: 0

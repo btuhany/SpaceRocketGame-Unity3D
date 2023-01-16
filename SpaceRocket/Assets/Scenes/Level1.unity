@@ -794,6 +794,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9098b0822df134389733666f6c4ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xMax: 0
+  xMin: 0
+  yMax: 0
+  yMin: 0
+  zMax: 0
+  zMin: 0
 --- !u!1001 &851274914437576574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,13 +1233,41 @@ PrefabInstance:
       propertyPath: _maxHeat
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _heatDecreaseSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
       value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: xMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: xMin
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: yMax
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: yMin
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: zMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: zMin
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 9100084480093141612, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_RootOrder

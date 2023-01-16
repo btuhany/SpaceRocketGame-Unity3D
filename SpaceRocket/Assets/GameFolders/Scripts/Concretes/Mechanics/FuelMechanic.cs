@@ -21,6 +21,7 @@ namespace Mechanics
             
             _totalFuel = Mathf.Max(_totalFuel, 0f);
             FuelControl();
+            
 
         }
         private void FuelControl()

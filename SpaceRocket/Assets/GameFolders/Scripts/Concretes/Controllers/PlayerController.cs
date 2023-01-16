@@ -14,6 +14,7 @@ namespace Controllers
         [SerializeField] float _enginePower = 2f;
         [SerializeField] float _rotateSpeed;
         [SerializeField] float _engineRotatePower;
+       
 
         DefaultInput _input;
         Mover _mover;
@@ -22,6 +23,7 @@ namespace Controllers
         RocketParticles _particles;
         Rigidbody _rb;
         FuelMechanic _fuel;
+        BoundaryController _boundary;
 
         bool _canMove;
         bool _isEngineOn;
@@ -49,6 +51,7 @@ namespace Controllers
             _overheat = GetComponent<OverheatMechanic>();
             _particles = GetComponent<RocketParticles>();
             _fuel = GetComponent<FuelMechanic>();
+            _boundary = GetComponent<BoundaryController>();
         }
         private void Start()
         {
@@ -67,7 +70,17 @@ namespace Controllers
         private void Update()
         {
             if (!_canMove) return;
-            
+            if(!_boundary.IsInBoundary())
+            {
+                Debug.Log("Outside");
+                _fuel.DecreaseFuel(3f);
+                if (!_boundary.OutOfBoundaries)
+                {
+                    _overheat.SetCurrentHeat(104);
+                    _boundary.OutOfBoundaries = true;
+                }
+
+            }
             if (_input.Restart)
             {
                 GameManager.Instance.LoadLevelScene(0);
