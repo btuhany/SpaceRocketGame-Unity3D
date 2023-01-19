@@ -9,7 +9,8 @@ namespace Managers
     public class StartCamera : MonoBehaviour
     {
         [SerializeField] Transform _inGameCamera;
-        [SerializeField] float _transitionSpeed;
+        [SerializeField] float _positionTransitionSpeed;
+        [SerializeField] float _quaternionTransitionSpeed;
         [SerializeField] float _distanceLevel;
         [SerializeField] PlayerController _player;
         bool _cameraTransition;
@@ -47,8 +48,8 @@ namespace Managers
             }
             if (_cameraTransition)
             {
-                Vector3 startPosition = Vector3.Lerp(transform.position, _inGameCamera.position, _transitionSpeed * Time.deltaTime);
-                Quaternion startRotation = Quaternion.Lerp(transform.rotation, _inGameCamera.rotation, _transitionSpeed * Time.deltaTime);
+                Vector3 startPosition = Vector3.Lerp(transform.position, _inGameCamera.position, _positionTransitionSpeed * Time.deltaTime);
+                Quaternion startRotation = Quaternion.Lerp(transform.rotation, _inGameCamera.rotation, _quaternionTransitionSpeed * Time.deltaTime);
                 transform.position = startPosition;
                 transform.rotation = startRotation;
                 if (Vector3.one.magnitude * _distanceLevel > (transform.position - _inGameCamera.position).magnitude)

@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inGameCamera: {fileID: 0}
-  _transitionSpeed: 1
-  _distanceLevel: 0
+  _positionTransitionSpeed: 10
+  _quaternionTransitionSpeed: 20
+  _distanceLevel: 0.2
   _player: {fileID: 0}
 --- !u!20 &7888533804126986862
 Camera:

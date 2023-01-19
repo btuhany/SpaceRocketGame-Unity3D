@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8032957021326282586}
   - component: {fileID: 8032957021326282585}
   - component: {fileID: 973004789782929035}
+  - component: {fileID: 4045079485466629574}
   m_Layer: 0
   m_Name: Asteroid5_M
   m_TagString: Untagged
@@ -34104,3 +34105,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &4045079485466629574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032957021326282584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd58c8f2a38916649b8fce87782666ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: {x: 0, y: 0, z: 0}
+  _speed: 1
+  _torqueForce: 1

@@ -131,6 +131,7 @@ namespace Controllers
         private void HandleOnEventGameOver()
         {
             ResetandStop();
+            _particles.GameOverParticle.gameObject.SetActive(true);
         }
         /// <summary>
         /// Birleþtirilebilir

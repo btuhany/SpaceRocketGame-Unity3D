@@ -18,15 +18,18 @@ namespace Managers
         private void LateUpdate()
         {
             Vector3 playerPositionFreezingZ = _playerTransform.position;
+            
             if (playerPositionFreezingZ.z >= _cameraLimitAtZ)
             {
                 playerPositionFreezingZ.z = _cameraLimitAtZ;
             }
 
 
-
+           
+            
             Vector3 _newPosition = Vector3.Lerp(transform.position, playerPositionFreezingZ + _offset, _lerpTime * Time.deltaTime);
             transform.position = _newPosition;
+
         }
     }
 }
