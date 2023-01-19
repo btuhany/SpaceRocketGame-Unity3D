@@ -14,7 +14,8 @@ namespace Controllers
         [SerializeField] float _enginePower = 2f;
         [SerializeField] float _rotateSpeed;
         [SerializeField] float _engineRotatePower;
-       
+        [SerializeField] float _fuelDecreaseSpeedOutside;
+
 
         DefaultInput _input;
         Mover _mover;
@@ -73,11 +74,11 @@ namespace Controllers
             if(!_boundary.IsInBoundary())
             {
                 Debug.Log("Outside");
-                _fuel.DecreaseFuel(3f);
+                _fuel.DecreaseFuel(_fuelDecreaseSpeedOutside);
                 if (!_boundary.OutOfBoundaries)
                 {
-                    _overheat.SetCurrentHeat(104);
-                    _boundary.OutOfBoundaries = true;
+                    _overheat.SetCurrentHeat(104);    
+                    _boundary.OutOfBoundaries = true; // should have done it with event
                 }
 
             }

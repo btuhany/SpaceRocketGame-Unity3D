@@ -11,15 +11,20 @@ namespace Managers
     {
         [SerializeField] Vector3 _direction;
         [SerializeField] float _speed = 1f;
-         float _factor;
-
+        [SerializeField] float _torqueForce = 1f;
+        float _factor;
+        Rigidbody _rb;
         Vector3 _startPosition;
         
         private void Awake()
         {
             _startPosition= transform.position;
+            _rb= GetComponent<Rigidbody>();
         }
-
+        private void Start()
+        {
+            _rb.AddTorque((Vector3.forward + Vector3.right)*_torqueForce);
+        }
         private void Update()
         {
             //sin(2*pi*T*speed) 
@@ -28,8 +33,8 @@ namespace Managers
             Vector3 offset= _direction * _factor;
             transform.position = offset + _startPosition;
 
-
             
+
         }
     }
 
