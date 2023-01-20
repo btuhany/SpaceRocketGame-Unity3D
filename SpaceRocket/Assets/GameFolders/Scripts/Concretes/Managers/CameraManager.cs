@@ -8,8 +8,11 @@ namespace Managers
         [SerializeField] Transform _playerTransform;
         [SerializeField] private float _lerpTime;
         [SerializeField] float _cameraLimitAtZ;
+        [SerializeField] float _cameraChangeAtY;
+        [SerializeField] float _cameraPosChangeForY;
         private Vector3 _offset;
-
+        private bool _flag;
+        
         private void Start()
         {
             _offset = transform.position - _playerTransform.position;
@@ -23,12 +26,35 @@ namespace Managers
             {
                 playerPositionFreezingZ.z = _cameraLimitAtZ;
             }
+            transform.position = Vector3.Lerp(transform.position, playerPositionFreezingZ + _offset, _lerpTime * Time.deltaTime);
 
 
-           
-            
-            Vector3 _newPosition = Vector3.Lerp(transform.position, playerPositionFreezingZ + _offset, _lerpTime * Time.deltaTime);
-            transform.position = _newPosition;
+            newPositionAtY(_cameraChangeAtY, _cameraPosChangeForY);
+        }
+
+
+        void newPositionAtY(float yLimit, float y)   //May not be the optimum way!!!!
+        {
+            if(yLimit>0)
+            {
+                if (_playerTransform.position.y > yLimit)
+                {
+                    if (!_flag)
+                    {
+                        _offset.y += y;
+                        _flag = true;
+                    }
+                }
+                else
+                {
+                    if (_flag)
+                    {
+                        _offset.y -= y;
+                        _flag = false;
+                    }
+                }
+            }
+
 
         }
     }
