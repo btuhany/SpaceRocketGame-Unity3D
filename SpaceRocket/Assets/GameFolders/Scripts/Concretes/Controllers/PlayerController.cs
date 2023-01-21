@@ -88,6 +88,10 @@ namespace Controllers
             {
                 GameManager.Instance.LoadLevelScene(0);
             }
+            if (_input.Esc)
+            {
+                GameManager.Instance.LoadMenuScene();
+            }
             if (_input.IsEngineUp && _overheat.IsOverHeated)
             {
                 _isEngineOn = false;

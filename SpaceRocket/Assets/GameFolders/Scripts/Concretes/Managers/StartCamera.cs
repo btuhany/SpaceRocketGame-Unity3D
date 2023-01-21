@@ -1,9 +1,12 @@
 using Cinemachine;
 using Controllers;
+using Inputs;
 using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
+
 namespace Managers
 {
     public class StartCamera : MonoBehaviour
@@ -14,6 +17,7 @@ namespace Managers
         [SerializeField] float _distanceLevel;
         [SerializeField] PlayerController _player;
         [SerializeField] GameObject WarningText;
+        DefaultInput _input;
         bool _cameraTransition;
         bool _isCameraTransitionFinished;
         public static StartCamera Instance { get; private set; }
@@ -35,6 +39,10 @@ namespace Managers
         //        Destroy(this.gameObject);
         //    }
         //}
+        private void Awake()
+        {
+            _input = new DefaultInput();
+        }
         private void Update()
         {
             if (_isCameraTransitionFinished)
@@ -42,7 +50,7 @@ namespace Managers
                 gameObject.GetComponent<CinemachineBrain>().enabled = true;
                 Destroy(gameObject.GetComponent<StartCamera>());
             }
-            if (Input.anyKeyDown && !_isCameraTransitionFinished)
+            if ( _input.IsEngineUp && !_isCameraTransitionFinished)
             {
                 _cameraTransition = true;
                 _player.CanMove = false;

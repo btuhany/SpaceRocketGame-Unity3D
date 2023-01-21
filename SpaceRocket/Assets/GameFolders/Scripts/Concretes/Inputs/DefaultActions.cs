@@ -64,6 +64,15 @@ namespace Inputs
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""372b909b-35fb-4139-9a6c-598a461ca67a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,17 @@ namespace Inputs
                     ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""35c4c81d-46b3-495c-a122-770666533677"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +186,7 @@ namespace Inputs
             m_Rocket_RotateZ = m_Rocket.FindAction("RotateZ", throwIfNotFound: true);
             m_Rocket_RotateX = m_Rocket.FindAction("RotateX", throwIfNotFound: true);
             m_Rocket_Restart = m_Rocket.FindAction("Restart", throwIfNotFound: true);
+            m_Rocket_MainMenu = m_Rocket.FindAction("MainMenu", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -229,6 +250,7 @@ namespace Inputs
         private readonly InputAction m_Rocket_RotateZ;
         private readonly InputAction m_Rocket_RotateX;
         private readonly InputAction m_Rocket_Restart;
+        private readonly InputAction m_Rocket_MainMenu;
         public struct RocketActions
         {
             private @DefaultActions m_Wrapper;
@@ -237,6 +259,7 @@ namespace Inputs
             public InputAction @RotateZ => m_Wrapper.m_Rocket_RotateZ;
             public InputAction @RotateX => m_Wrapper.m_Rocket_RotateX;
             public InputAction @Restart => m_Wrapper.m_Rocket_Restart;
+            public InputAction @MainMenu => m_Wrapper.m_Rocket_MainMenu;
             public InputActionMap Get() { return m_Wrapper.m_Rocket; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -258,6 +281,9 @@ namespace Inputs
                     @Restart.started -= m_Wrapper.m_RocketActionsCallbackInterface.OnRestart;
                     @Restart.performed -= m_Wrapper.m_RocketActionsCallbackInterface.OnRestart;
                     @Restart.canceled -= m_Wrapper.m_RocketActionsCallbackInterface.OnRestart;
+                    @MainMenu.started -= m_Wrapper.m_RocketActionsCallbackInterface.OnMainMenu;
+                    @MainMenu.performed -= m_Wrapper.m_RocketActionsCallbackInterface.OnMainMenu;
+                    @MainMenu.canceled -= m_Wrapper.m_RocketActionsCallbackInterface.OnMainMenu;
                 }
                 m_Wrapper.m_RocketActionsCallbackInterface = instance;
                 if (instance != null)
@@ -274,6 +300,9 @@ namespace Inputs
                     @Restart.started += instance.OnRestart;
                     @Restart.performed += instance.OnRestart;
                     @Restart.canceled += instance.OnRestart;
+                    @MainMenu.started += instance.OnMainMenu;
+                    @MainMenu.performed += instance.OnMainMenu;
+                    @MainMenu.canceled += instance.OnMainMenu;
                 }
             }
         }
@@ -284,6 +313,7 @@ namespace Inputs
             void OnRotateZ(InputAction.CallbackContext context);
             void OnRotateX(InputAction.CallbackContext context);
             void OnRestart(InputAction.CallbackContext context);
+            void OnMainMenu(InputAction.CallbackContext context);
         }
     }
 }

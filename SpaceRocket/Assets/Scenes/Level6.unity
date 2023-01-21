@@ -1066,14 +1066,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854826847}
-  m_LocalRotation: {x: 0.3689886, y: 0.45692578, z: 0.6031977, w: 0.539647}
-  m_LocalPosition: {x: -54.14, y: 15.19, z: -14.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39, y: 105.53, z: -51.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 118729555}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -8.8, y: 71.71, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &854826849
 Light:
   m_ObjectHideFlags: 0
@@ -1085,10 +1085,10 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8066038, b: 0.9943943, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 0.57806796, g: 0.745283, b: 0.4324048, a: 1}
+  m_Intensity: 10
   m_Range: 50.503376
-  m_SpotAngle: 77.51174
+  m_SpotAngle: 43.38692
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -3263,6 +3263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6245160047405920464, guid: 2e54a69710519e74a970e431e09f0775, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245160047405920464, guid: 2e54a69710519e74a970e431e09f0775, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e54a69710519e74a970e431e09f0775, type: 3}
 --- !u!1001 &2271866630656779529
@@ -3472,7 +3480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 3750
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
