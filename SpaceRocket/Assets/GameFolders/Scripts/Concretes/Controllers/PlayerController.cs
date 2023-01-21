@@ -15,6 +15,8 @@ namespace Controllers
         [SerializeField] float _rotateSpeed;
         [SerializeField] float _engineRotatePower;
         [SerializeField] float _fuelDecreaseSpeedOutside;
+        [SerializeField] bool _canRotateBackForw = true;
+        [SerializeField] bool _canRotateLeftRight = true;
 
 
         DefaultInput _input;
@@ -110,9 +112,15 @@ namespace Controllers
                 Debug.Log("EngineDown,HeatDecreases");
 
             }
-                
-            _rotateLeftRight = _input.RotateLeftRight;
-            _rotateFrontBack = _input.RotateFrontBack;
+
+            if (_canRotateLeftRight)
+            {
+                _rotateLeftRight = _input.RotateLeftRight;
+            }
+            if(_canRotateBackForw)
+            {
+                 _rotateFrontBack = _input.RotateFrontBack;
+            }
         }
         private void FixedUpdate()
         {

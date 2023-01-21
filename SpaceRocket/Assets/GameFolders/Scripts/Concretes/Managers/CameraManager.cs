@@ -10,6 +10,7 @@ namespace Managers
         [SerializeField] float _cameraLimitAtZ;
         [SerializeField] float _cameraChangeAtY;
         [SerializeField] float _cameraPosChangeForY;
+
         private Vector3 _offset;
         private bool _flag;
         

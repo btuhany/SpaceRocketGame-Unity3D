@@ -22,19 +22,19 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 7f13da08774bd2947b660b613338f30f, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 0.82, y: 4}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e34bf9165dbb22c429916404b0e20102, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 0.62, y: 0.45}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 2800000, guid: e34bf9165dbb22c429916404b0e20102, type: 3}
-        m_Scale: {x: 4, y: 4}
+        m_Scale: {x: 0.93, y: 4}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Parallax: 0.067014925
+    - _Parallax: 0.0656
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

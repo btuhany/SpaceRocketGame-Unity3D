@@ -13,6 +13,7 @@ namespace Managers
         [SerializeField] float _quaternionTransitionSpeed;
         [SerializeField] float _distanceLevel;
         [SerializeField] PlayerController _player;
+        [SerializeField] GameObject WarningText;
         bool _cameraTransition;
         bool _isCameraTransitionFinished;
         public static StartCamera Instance { get; private set; }
@@ -45,6 +46,7 @@ namespace Managers
             {
                 _cameraTransition = true;
                 _player.CanMove = false;
+                WarningText.SetActive(false);
             }
             if (_cameraTransition)
             {
