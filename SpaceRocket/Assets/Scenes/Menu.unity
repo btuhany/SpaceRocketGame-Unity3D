@@ -356,7 +356,7 @@ PrefabInstance:
         -"R"
         to restart
 
-        -"Esc" to main menu'
+        -"Esc" to gameover'
       objectReference: {fileID: 0}
     - target: {fileID: 6228301924595312900, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_FontData.m_FontSize

@@ -30,6 +30,8 @@ namespace Controllers
 
         bool _canMove;
         bool _isEngineOn;
+        bool restartGame;
+
         float _rotateLeftRight;
         float _rotateFrontBack;
 
@@ -58,7 +60,7 @@ namespace Controllers
         }
         private void Start()
         {
-            _canMove = true;
+            _canMove = false;
         }
         private void OnEnable()
         {
@@ -86,11 +88,13 @@ namespace Controllers
             }
             if (_input.Restart)
             {
-                GameManager.Instance.LoadLevelScene(0);
+                restartGame = true;
+                return;
             }
             if (_input.Esc)
             {
-                GameManager.Instance.LoadMenuScene();
+                GameManager.Instance.GameOver();
+                return;
             }
             if (_input.IsEngineUp && _overheat.IsOverHeated)
             {
@@ -130,11 +134,16 @@ namespace Controllers
         {
             if (_isEngineOn )  /*&& !_fuel.IsFuelRanOut*/
             {
-                _mover.RelativeForceUp(_enginePower);
-                
-                
+                _mover.RelativeForceUp(_enginePower); 
             }
-                _rotator.RotateZ(_rotateLeftRight, _rotateSpeed);
+
+            if(restartGame)
+            {
+                GameManager.Instance.LoadLevelScene(0);
+                restartGame= false;
+            }
+
+            _rotator.RotateZ(_rotateLeftRight, _rotateSpeed);
                 _mover.ForceUpIfRotates(_rotateLeftRight, _engineRotatePower);
                 _rotator.RotateX(_rotateFrontBack, _rotateSpeed);
                 _mover.ForceUpIfRotates(_rotateFrontBack, _engineRotatePower);
