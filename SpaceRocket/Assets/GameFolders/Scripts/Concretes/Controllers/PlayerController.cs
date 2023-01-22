@@ -29,7 +29,9 @@ namespace Controllers
         BoundaryController _boundary;
 
         bool _canMove;
+        bool _gameFinished;
         bool _isEngineOn;
+        float _currentTime;
         bool restartGame;
 
         float _rotateLeftRight;
@@ -71,6 +73,7 @@ namespace Controllers
         {
             GameManager.Instance.OnGameOver -= HandleOnEventGameOver;
             GameManager.Instance.OnLevelCompleted -= HandleOnEventLevelCompleted;
+            Time.timeScale = 1f;
         }
         private void Update()
         {
@@ -141,6 +144,7 @@ namespace Controllers
             {
                 GameManager.Instance.LoadLevelScene(0);
                 restartGame= false;
+                return;
             }
 
             _rotator.RotateZ(_rotateLeftRight, _rotateSpeed);
@@ -148,11 +152,18 @@ namespace Controllers
                 _rotator.RotateX(_rotateFrontBack, _rotateSpeed);
                 _mover.ForceUpIfRotates(_rotateFrontBack, _engineRotatePower);
 
+            if(_gameFinished)
+            {
+                GamePauseDelay(8f);
+            }
+
+
         }
         private void HandleOnEventGameOver()
         {
             ResetandStop();
             _particles.GameOverParticle.gameObject.SetActive(true);
+            _gameFinished= true;
         }
         /// <summary>
         /// Birleþtirilebilir
@@ -172,6 +183,15 @@ namespace Controllers
             _rotateFrontBack = 0f;
             _particles.StopIfPlaying(_particles.FireUpParticle);
             
+        }
+        private void GamePauseDelay(float delay)
+        {
+            if (_currentTime == 0)
+                _currentTime = Time.time;
+            if (Time.time > _currentTime + delay)
+            {
+                Time.timeScale= 0f;
+            }
         }
 
 

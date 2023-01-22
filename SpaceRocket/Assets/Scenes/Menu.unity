@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1055226965309155591, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
+      propertyPath: m_Name
+      value: ControlHelp
+      objectReference: {fileID: 0}
     - target: {fileID: 1417700167109051163, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -309,11 +313,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2913409620830727694, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 47.6542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913409620830727694, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2913409620830727694, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4234058828221502723, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -356,11 +364,16 @@ PrefabInstance:
         -"R"
         to restart
 
-        -"Esc" to gameover'
+        -"Esc" to gameover
+
+        -No fuel means gameover
+
+        -Avoid
+        overheating'
       objectReference: {fileID: 0}
     - target: {fileID: 6228301924595312900, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6248946945385566011, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_Pivot.x
@@ -492,19 +505,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699166177247416921, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1588.023
+      value: -1559.3081
       objectReference: {fileID: 0}
     - target: {fileID: 8699166177247416921, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -916.0447
+      value: -827.9506
       objectReference: {fileID: 0}
     - target: {fileID: 8699166177247416921, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -738.70764
+      value: -724.3502
       objectReference: {fileID: 0}
     - target: {fileID: 8699166177247416921, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 160.56836
+      value: 116.5213
       objectReference: {fileID: 0}
     - target: {fileID: 8733190180194451811, guid: fa3a2af2fded1e747b7d52aaa9795bd6, type: 3}
       propertyPath: m_IsActive

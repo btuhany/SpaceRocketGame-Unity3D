@@ -19,7 +19,7 @@ namespace Particles
         public ParticleSystem OverHeatStartParticle { get => _overHeatStartParticle; set => _overHeatStartParticle = value; }
         public ParticleSystem GameOverParticle { get => _gameOverParticle; set => _gameOverParticle = value; }
 
-        private void OnEnable()
+        private void Awake()
         {
             _fireUpParticle.Stop();
             _overHeatFireParticle.Stop();
