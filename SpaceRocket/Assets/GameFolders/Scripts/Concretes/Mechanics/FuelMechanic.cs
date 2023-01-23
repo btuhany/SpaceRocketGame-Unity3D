@@ -9,6 +9,7 @@ namespace Mechanics
     {
         [SerializeField] private float _totalFuel;
         [SerializeField] float _fuelDecreaseSpeed;
+        [SerializeField] float _fuelAlertSoundLimit;
         //[SerializeField] float _fuelDecreaseSpeedOutOfBoundaries;
         public bool IsFuelRanOut => _totalFuel == 0;
 
@@ -20,7 +21,7 @@ namespace Mechanics
 
             _totalFuel = Mathf.Max(_totalFuel, 0f);
             FuelControl();
-
+            
 
         }
         private void FuelControl()
@@ -28,6 +29,14 @@ namespace Mechanics
             if (_totalFuel == 0f)
             {
                 GameManager.Instance.GameOver();
+            }
+            else if(_totalFuel< _fuelAlertSoundLimit)
+            {
+                SoundManager.Instance.PlaySound(7);
+            }
+            else
+            {
+                SoundManager.Instance.StopSound(7);
             }
         }
     }

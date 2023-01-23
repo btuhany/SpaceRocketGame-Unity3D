@@ -23,9 +23,26 @@ namespace Managers
         {
             Vector3 playerPositionFreezingZ = _playerTransform.position;
             
+            //Manuel sound fade control :( because audio clips in the same gameobject.
+            if (_playerTransform.position.z >= _cameraLimitAtZ*1.3f)
+            {
+                SoundManager.Instance.SetVolume(0, 0.35f);
+            }
+            if (_playerTransform.position.z >= _cameraLimitAtZ * 1.6f)
+            {
+                SoundManager.Instance.SetVolume(0, 0.22f);
+            }
+            if (_playerTransform.position.z >= _cameraLimitAtZ * 2f)
+            {
+                SoundManager.Instance.SetVolume(0, 0.11f);
+            }
             if (playerPositionFreezingZ.z >= _cameraLimitAtZ)
             {
                 playerPositionFreezingZ.z = _cameraLimitAtZ;
+            }
+            else
+            {
+                SoundManager.Instance.SetVolume(0, 0.5f);
             }
             transform.position = Vector3.Lerp(transform.position, playerPositionFreezingZ + _offset, _lerpTime * Time.deltaTime);
 

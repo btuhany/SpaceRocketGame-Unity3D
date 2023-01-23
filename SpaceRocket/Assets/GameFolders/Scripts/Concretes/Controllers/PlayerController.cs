@@ -104,6 +104,7 @@ namespace Controllers
                 _isEngineOn = false;
                 _overheat.OverHeating();
                 _particles.StopIfPlaying(_particles.FireUpParticle);
+                SoundManager.Instance.PlaySoundWithDelay(6, 1.1f);
                 Debug.Log("EngineUp,Overheat");
 
             }
@@ -113,6 +114,7 @@ namespace Controllers
                 _overheat.HeatIncrease();
                 _particles.PlayIfStopped(_particles.FireUpParticle);
                 _fuel.DecreaseFuel();
+                
                 Debug.Log("EngineUp,HeatIncreases");
             }
             else
@@ -120,7 +122,9 @@ namespace Controllers
                 _isEngineOn = false;
                 _overheat.HeatDecrease();
                 _particles.StopIfPlaying(_particles.FireUpParticle);
+                SoundManager.Instance.StopSound(6);
                 Debug.Log("EngineDown,HeatDecreases");
+               
 
             }
 
@@ -137,7 +141,12 @@ namespace Controllers
         {
             if (_isEngineOn )  /*&& !_fuel.IsFuelRanOut*/
             {
-                _mover.RelativeForceUp(_enginePower); 
+                _mover.RelativeForceUp(_enginePower);
+                SoundManager.Instance.PlaySound(0);
+            }
+            else
+            {
+                SoundManager.Instance.StopSound(0);
             }
 
             if(restartGame)
@@ -164,6 +173,7 @@ namespace Controllers
             ResetandStop();
             _particles.GameOverParticle.gameObject.SetActive(true);
             _gameFinished= true;
+            
         }
         /// <summary>
         /// Birleþtirilebilir
@@ -182,7 +192,8 @@ namespace Controllers
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;
             _particles.StopIfPlaying(_particles.FireUpParticle);
-            
+            SoundManager.Instance.StopSound(6);
+
         }
         private void GamePauseDelay(float delay)
         {

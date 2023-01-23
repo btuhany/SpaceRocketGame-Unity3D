@@ -15,6 +15,11 @@ namespace Managers
         private void Awake()
         {
             SingletonThisGameObject(this);
+           
+        }
+        private void Start()
+        {
+            SoundManager.Instance.PlaySound(1);
         }
 
 
@@ -27,6 +32,7 @@ namespace Managers
 
             OnGameOver?.Invoke();
 
+            SoundManager.Instance.PlaySound(4);
 
 
         }
@@ -37,10 +43,14 @@ namespace Managers
             //    OnGameOver.Invoke();
             //}
             OnLevelCompleted?.Invoke();
+            
+            SoundManager.Instance.PlaySound(3);
         }
         public void LoadLevelScene(int levelIndex=0)
         {
-            StartCoroutine(LoadLevelSceneAsync(levelIndex));            
+            StartCoroutine(LoadLevelSceneAsync(levelIndex));
+            SoundManager.Instance.StopAllSounds();
+            SoundManager.Instance.PlaySound(2);
         }
         IEnumerator LoadLevelSceneAsync(int levelIndex)
         {
@@ -55,6 +65,8 @@ namespace Managers
         public void LoadMenuScene()
         {
             StartCoroutine(LoadMenuSceneAsync());
+            SoundManager.Instance.StopAllSounds();
+            SoundManager.Instance.PlaySound(1);
 
         }
         IEnumerator LoadMenuSceneAsync()

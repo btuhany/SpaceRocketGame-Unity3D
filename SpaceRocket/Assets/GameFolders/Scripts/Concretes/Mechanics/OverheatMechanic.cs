@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Particles;
+using Managers;
+
 namespace Mechanics 
 {
     public class OverheatMechanic : MonoBehaviour
@@ -49,12 +51,14 @@ namespace Mechanics
             if (!_isOverheatStartedAlready)
             {
                 _particles.OverHeatStartParticle.gameObject.SetActive(true);
+                SoundManager.Instance.PlaySound(5);
                 _isOverheatStartedAlready = true;
             }
 
             _currentHeat += _heatIncreaseSpeed*1.2f;
             _currentHeat = Mathf.Min(_currentHeat, _maxHeat+1f);
             _particles.PlayIfStopped(_particles.OverHeatingParticle);  //Maybe SetActive also can be used.
+           
 
         }
         public void SetCurrentHeat(float heat)

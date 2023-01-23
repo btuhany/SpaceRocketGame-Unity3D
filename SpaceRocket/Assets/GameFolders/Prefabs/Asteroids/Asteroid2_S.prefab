@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _direction: {x: 0, y: 0, z: 0}
   _speed: 1
-  _factor: 0
+  _torqueForce: 1
 --- !u!33 &4693806620024816576
 MeshFilter:
   m_ObjectHideFlags: 0
