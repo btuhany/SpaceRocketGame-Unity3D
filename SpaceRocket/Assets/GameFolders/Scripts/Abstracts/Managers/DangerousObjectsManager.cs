@@ -15,7 +15,7 @@ namespace Abstracts.Managers
             if (player != null && player.CanMove)
             {
                 GameManager.Instance.GameOver();
-                
+                SoundManager.Instance.PlaySound(8);
             }
         }
     }

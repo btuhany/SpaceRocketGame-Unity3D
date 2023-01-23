@@ -16569,6 +16569,7 @@ MonoBehaviour:
   _direction: {x: 5, y: 10, z: 0}
   _speed: 0.075
   _torqueForce: 5
+  audioPlayAtFactorValue: 0
 --- !u!1 &4940875145707076262
 GameObject:
   m_ObjectHideFlags: 0

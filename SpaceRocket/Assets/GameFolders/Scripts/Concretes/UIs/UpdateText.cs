@@ -21,7 +21,10 @@ namespace UIs
             TextMeshProUGUI _fuelPercentLabel = GetComponent<TextMeshProUGUI>(); 
             if (_fuelPercentLabel != null)
             {
+                if (value / _fuelSlider.Slider.maxValue * 100 <= 20)
+                    _fuelPercentLabel.faceColor = Color.red;
                 _fuelPercentLabel.SetText(Mathf.RoundToInt(value / _fuelSlider.Slider.maxValue * 100).ToString());
+                
             }
                 //_fuelPercentLabel = Mathf.RoundToInt(value * 100) + "%";
         }

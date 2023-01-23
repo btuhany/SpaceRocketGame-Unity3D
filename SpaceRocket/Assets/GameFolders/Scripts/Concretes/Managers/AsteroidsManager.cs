@@ -12,14 +12,17 @@ namespace Managers
         [SerializeField] Vector3 _direction;
         [SerializeField] float _speed = 1f;
         [SerializeField] float _torqueForce = 1f;
+        [SerializeField] float audioPlayAtFactorValue;
         float _factor;
         Rigidbody _rb;
+        AudioSource _audioSource;
         Vector3 _startPosition;
         
         private void Awake()
         {
             _startPosition= transform.position;
             _rb= GetComponent<Rigidbody>();
+            _audioSource = GetComponent<AudioSource>();
         }
         private void Start()
         {
@@ -30,6 +33,19 @@ namespace Managers
             //sin(2*pi*T*speed) 
             float sinWave= Mathf.Sin(Mathf.PI*2*Time.time*_speed);
             _factor = sinWave;
+            if (_factor> audioPlayAtFactorValue || _factor<-audioPlayAtFactorValue)
+            {
+
+                Debug.Log(_factor);
+                if (!_audioSource.isPlaying)
+                    _audioSource.Play();
+            }
+            else
+            {
+                if (_audioSource.isPlaying)
+                    _audioSource.Stop();
+            }
+            
             Vector3 offset= _direction * _factor;
             transform.position = offset + _startPosition;
 
