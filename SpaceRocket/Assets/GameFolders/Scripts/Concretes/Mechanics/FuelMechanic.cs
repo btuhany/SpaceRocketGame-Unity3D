@@ -9,11 +9,15 @@ namespace Mechanics
     {
         [SerializeField] private float _totalFuel;
         [SerializeField] float _fuelDecreaseSpeed;
-        [SerializeField] float _fuelAlertSoundLimit;
+        float _fuelAlertSoundLimit;
         //[SerializeField] float _fuelDecreaseSpeedOutOfBoundaries;
         public bool IsFuelRanOut => _totalFuel == 0;
 
         public float TotalFuel { get => _totalFuel; set => _totalFuel = value; }
+        private void Start()
+        {
+            _fuelAlertSoundLimit = _totalFuel * 0.2f;
+        }
 
         public void DecreaseFuel(float speed = 1f)
         {

@@ -312,15 +312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3703369951493456362, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 247.8203
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3703369951493456362, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 616.3945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3703369951493456362, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -49.338318
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3703369951493456362, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -357,6 +357,10 @@ PrefabInstance:
     - target: {fileID: 4861587478537862418, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_Name
       value: '[SoundManager]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
+      propertyPath: m_Pitch
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 7193548089995421247, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_Enabled
@@ -964,15 +968,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelAlertSoundLimit
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _rotateSpeed
+      value: 780
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeedOutside
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3748589361989813290, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
@@ -981,6 +989,26 @@ PrefabInstance:
     - target: {fileID: 4627634053867015275, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: xMax
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: xMin
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: yMin
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: zMax
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: zMin
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8819604764880606299, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_Intensity

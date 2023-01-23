@@ -1,3 +1,4 @@
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,11 @@ namespace Movements
         public void ForceUpIfRotates(float RotateFloat, float Force)
         {
 
-            if (RotateFloat != 0) { _rigidbody.AddForce(Vector3.up * Time.deltaTime * Force); }
+            if (RotateFloat != 0) 
+            { 
+                _rigidbody.AddForce(Vector3.up * Time.deltaTime * Force);
+                SoundManager.Instance.PlaySound(9);
+            }
 
         }
        

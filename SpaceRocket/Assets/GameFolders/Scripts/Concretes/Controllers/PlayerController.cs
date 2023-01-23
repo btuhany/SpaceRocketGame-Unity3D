@@ -157,11 +157,12 @@ namespace Controllers
             }
 
             _rotator.RotateZ(_rotateLeftRight, _rotateSpeed);
-                _mover.ForceUpIfRotates(_rotateLeftRight, _engineRotatePower);
-                _rotator.RotateX(_rotateFrontBack, _rotateSpeed);
-                _mover.ForceUpIfRotates(_rotateFrontBack, _engineRotatePower);
+            _mover.ForceUpIfRotates(_rotateLeftRight, _engineRotatePower);
+            _rotator.RotateX(_rotateFrontBack, _rotateSpeed);
+            _mover.ForceUpIfRotates(_rotateFrontBack, _engineRotatePower);
+            
 
-            if(_gameFinished)
+            if (_gameFinished)
             {
                 GamePauseDelay(8f);
             }

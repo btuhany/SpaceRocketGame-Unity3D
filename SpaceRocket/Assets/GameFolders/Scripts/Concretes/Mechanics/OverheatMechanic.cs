@@ -67,6 +67,7 @@ namespace Mechanics
             if(heat>_maxHeat)
             {
                 _particles.OverHeatStartParticle.gameObject.SetActive(true);
+                SoundManager.Instance.PlaySound(5);
             }
         }
 

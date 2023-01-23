@@ -35,8 +35,6 @@ namespace Managers
             _factor = sinWave;
             if (_factor> audioPlayAtFactorValue || _factor<-audioPlayAtFactorValue)
             {
-
-                Debug.Log(_factor);
                 if (!_audioSource.isPlaying)
                     _audioSource.Play();
             }
