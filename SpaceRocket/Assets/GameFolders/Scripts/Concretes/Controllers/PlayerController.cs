@@ -131,10 +131,17 @@ namespace Controllers
             if (_canRotateLeftRight)
             {
                 _rotateLeftRight = _input.RotateLeftRight;
+                
             }
             if(_canRotateBackForw)
             {
                  _rotateFrontBack = _input.RotateFrontBack;
+                {
+                    if(_rotateFrontBack==0 && _rotateLeftRight==0)
+                    {
+                        SoundManager.Instance.StopSound(9);
+                    }
+                }
             }
         }
         private void FixedUpdate()

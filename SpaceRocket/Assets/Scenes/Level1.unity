@@ -359,9 +359,21 @@ PrefabInstance:
       value: '[SoundManager]'
       objectReference: {fileID: 0}
     - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Pitch
-      value: 1.42
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
+      propertyPath: m_Pitch
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
+      propertyPath: m_Volume
+      value: 0.247
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c72bfaef16e81f144a528dcee7d1efe9, type: 3}
     - target: {fileID: 7193548089995421247, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_Enabled
       value: 1
