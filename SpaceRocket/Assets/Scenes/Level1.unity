@@ -298,14 +298,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 760579174957303524, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562093751893645303, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Volume
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 3703369951493456362, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -350,33 +342,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4637656671833755202, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4861587478537862418, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
       propertyPath: m_Name
       value: '[SoundManager]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Pitch
-      value: 1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Volume
-      value: 0.247
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554559230501430731, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c72bfaef16e81f144a528dcee7d1efe9, type: 3}
-    - target: {fileID: 7193548089995421247, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2839c4646be26844ab1876269d966d0b, type: 3}
@@ -387,18 +355,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807784267}
     m_Modifications:
-    - target: {fileID: 496811202946097629, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
-      propertyPath: m_Pitch
-      value: 0.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 496811202946097629, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
-      propertyPath: m_Volume
-      value: 0.506
-      objectReference: {fileID: 0}
-    - target: {fileID: 496811202946097629, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b68097ab7edb396488ddce25948e2781, type: 3}
     - target: {fileID: 1591107185656898587, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
       propertyPath: m_Mass
       value: 10
@@ -489,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5355268976534497461, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
       propertyPath: audioPlayAtFactorValue
-      value: 0.9
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 5951963572373251923, guid: ea47100ef4eb71547baad062938e6bec, type: 3}
       propertyPath: m_IsTrigger
@@ -968,7 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatDecreaseSpeed
-      value: 0.4
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _heatIncreaseSpeed
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2903414772443713525, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
@@ -980,7 +940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 500
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _fuelDecreaseSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelAlertSoundLimit
@@ -1001,6 +965,18 @@ PrefabInstance:
     - target: {fileID: 4627634053867015275, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262117142186004564, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262117142186004564, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: lengthInSec
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262117142186004565, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: xMax

@@ -34,13 +34,13 @@ namespace Mechanics
             {
                 GameManager.Instance.GameOver();
             }
-            else if(_totalFuel< _fuelAlertSoundLimit)
+            else if (_totalFuel < _fuelAlertSoundLimit)
             {
                 SoundManager.Instance.PlaySound(7);
             }
             else
             {
-                SoundManager.Instance.StopSound(7);
+                SoundManager.Instance.StopSound(7, 1f);
             }
         }
     }

@@ -89,7 +89,7 @@ namespace Controllers
                 }
 
             }
-            if (_input.Restart)
+            if (_input.Restart)  //Restart in fixed update, stuttering otherwise?
             {
                 restartGame = true;
                 return;
@@ -122,7 +122,7 @@ namespace Controllers
                 _isEngineOn = false;
                 _overheat.HeatDecrease();
                 _particles.StopIfPlaying(_particles.FireUpParticle);
-                SoundManager.Instance.StopSound(6);
+                SoundManager.Instance.StopSound(6,1f);
                 Debug.Log("EngineDown,HeatDecreases");
                
 
@@ -132,16 +132,24 @@ namespace Controllers
             {
                 _rotateLeftRight = _input.RotateLeftRight;
                 
+                
             }
             if(_canRotateBackForw)
             {
-                 _rotateFrontBack = _input.RotateFrontBack;
-                {
-                    if(_rotateFrontBack==0 && _rotateLeftRight==0)
-                    {
-                        SoundManager.Instance.StopSound(9);
-                    }
-                }
+                _rotateFrontBack = _input.RotateFrontBack;
+                
+
+            }
+            // >0 <0
+            if (_rotateFrontBack == 0 && _rotateLeftRight == 0)
+            {
+                SoundManager.Instance.StopSound(9, 1f);
+                
+            }
+            else
+            {
+                SoundManager.Instance.PlaySound(9);
+                _particles.RotatingParticle.gameObject.SetActive(true);
             }
         }
         private void FixedUpdate()
@@ -153,7 +161,7 @@ namespace Controllers
             }
             else
             {
-                SoundManager.Instance.StopSound(0);
+                SoundManager.Instance.StopSound(0,0.5f);
             }
 
             if(restartGame)
@@ -200,7 +208,7 @@ namespace Controllers
             _rotateLeftRight = 0f;
             _rotateFrontBack = 0f;
             _particles.StopIfPlaying(_particles.FireUpParticle);
-            SoundManager.Instance.StopSound(6);
+            SoundManager.Instance.StopSound(6, 1f);
 
         }
         private void GamePauseDelay(float delay)

@@ -31,7 +31,7 @@ namespace Managers
             //}
 
             OnGameOver?.Invoke();
-
+            SoundManager.Instance.StopAllSounds();
             SoundManager.Instance.PlaySound(4);
 
 
@@ -43,7 +43,7 @@ namespace Managers
             //    OnGameOver.Invoke();
             //}
             OnLevelCompleted?.Invoke();
-            
+            SoundManager.Instance.StopAllSounds();
             SoundManager.Instance.PlaySound(3);
         }
         public void LoadLevelScene(int levelIndex=0)

@@ -10,6 +10,7 @@ namespace Particles
     {
         
         [SerializeField] ParticleSystem _fireUpParticle;
+        [SerializeField] ParticleSystem _rotatingParticle;
         [SerializeField] ParticleSystem _overHeatFireParticle;
         [SerializeField] ParticleSystem _overHeatStartParticle;
         [SerializeField] ParticleSystem _gameOverParticle;
@@ -18,6 +19,7 @@ namespace Particles
         public ParticleSystem OverHeatingParticle { get => _overHeatFireParticle; set => _overHeatFireParticle = value; }
         public ParticleSystem OverHeatStartParticle { get => _overHeatStartParticle; set => _overHeatStartParticle = value; }
         public ParticleSystem GameOverParticle { get => _gameOverParticle; set => _gameOverParticle = value; }
+        public ParticleSystem RotatingParticle { get => _rotatingParticle; set => _rotatingParticle = value; }
 
         private void Awake()
         {
@@ -39,6 +41,7 @@ namespace Particles
             }
         }
 
+       
 
     }
 

@@ -26,7 +26,8 @@ namespace Movements
             if (RotateFloat != 0) 
             { 
                 _rigidbody.AddForce(Vector3.up * Time.deltaTime * Force);
-                SoundManager.Instance.PlaySound(9);
+               
+
             }
 
         }
