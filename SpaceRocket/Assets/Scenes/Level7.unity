@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.1
+      value: -10.3
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -521,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.9282
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -647,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.9282
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1277,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.9
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 5058737577533638560, guid: 0468f88efa709a34996aee3173c0455c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1540,16 +1540,20 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _heatDecreaseSpeed
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.12
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 1400
+      value: 1580
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
-      value: 0.8
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _enginePower
@@ -1562,6 +1566,10 @@ PrefabInstance:
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _canRotateBackForw
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _fuelDecreaseSpeedOutside
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: xMax

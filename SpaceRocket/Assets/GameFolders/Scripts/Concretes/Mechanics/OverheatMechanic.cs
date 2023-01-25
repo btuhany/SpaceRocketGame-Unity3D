@@ -35,14 +35,14 @@ namespace Mechanics
         public void HeatIncrease()
         {
             
-            _currentHeat += _heatIncreaseSpeed;
+            _currentHeat += _heatIncreaseSpeed*Time.deltaTime;
             _isOverheatStartedAlready = false;
             
         }
 
         public void HeatDecrease()
         {
-            _currentHeat -= _heatDecreaseSpeed;
+            _currentHeat -= _heatDecreaseSpeed * Time.deltaTime;
             _currentHeat = Mathf.Max(_currentHeat, 0f);
         }
 

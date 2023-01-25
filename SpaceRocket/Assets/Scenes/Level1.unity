@@ -924,11 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatDecreaseSpeed
-      value: 0.5
+      value: 95.5
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.35
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2903414772443713525, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_IsActive
@@ -940,11 +940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 750
+      value: 485
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
-      value: 0.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelAlertSoundLimit

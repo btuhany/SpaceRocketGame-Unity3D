@@ -21,7 +21,7 @@ namespace Mechanics
 
         public void DecreaseFuel(float speed = 1f)
         {
-            _totalFuel = _totalFuel - _fuelDecreaseSpeed * speed;
+            _totalFuel = _totalFuel - _fuelDecreaseSpeed * speed * Time.deltaTime;
 
             _totalFuel = Mathf.Max(_totalFuel, 0f);
             FuelControl();

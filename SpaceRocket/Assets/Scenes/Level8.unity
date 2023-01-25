@@ -2870,8 +2870,12 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _heatDecreaseSpeed
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.2
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2903414772443713524, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2903,15 +2907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 2050
+      value: 2280
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
-      value: 0.7
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _enginePower
-      value: 1700
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 3387423462103117906, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _rotateSpeed
