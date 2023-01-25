@@ -1576,11 +1576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _heatIncreaseSpeed
-      value: 0.2
+      value: 0.285
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _totalFuel
-      value: 2600
+      value: 1470
       objectReference: {fileID: 0}
     - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: _fuelDecreaseSpeed
@@ -1612,15 +1612,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: yMin
-      value: -11
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: zMax
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: zMin
-      value: -30
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 7465193514914099745, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: m_Constraints

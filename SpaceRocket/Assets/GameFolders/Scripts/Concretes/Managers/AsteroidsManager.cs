@@ -41,10 +41,6 @@ namespace Managers
                     _audioSource.Play();
                     
             }
-            else
-            {
-                    
-            }
             
             Vector3 offset= _direction * _factor;
             transform.position = offset + _startPosition;

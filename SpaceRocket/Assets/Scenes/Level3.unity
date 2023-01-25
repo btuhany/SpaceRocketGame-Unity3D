@@ -1086,6 +1086,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2217279232293015088, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _heatIncreaseSpeed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200758707169605948, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: _totalFuel
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: xMax
       value: 35
@@ -1095,12 +1103,16 @@ PrefabInstance:
       value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
+      propertyPath: yMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: yMin
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: zMax
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5877299879508248352, guid: a93aed5220ac99e408b651e175bed1f5, type: 3}
       propertyPath: zMin
