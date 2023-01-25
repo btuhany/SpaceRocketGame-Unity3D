@@ -6,4 +6,4 @@ Purpose is to reach the other planet while avoiding obstacles (asteroids and mov
 - There is a mechanic called "Overheat". If the player keeps the engine running for a long time, the overheat state begins in that case player can not force up the rocket. In the UI, the player can check overheat level.
 - To make player stay in the boundary limits, I added a script that checks the player position. If player goes out the limits, fuel starts to decrease with a faster speed until the player comes the boundary limits.
 
-![gameOver](https://user-images.githubusercontent.com/114235184/214607167-f4bee30f-fb19-4233-9788-9e2d3bb8fe2f.JPG)
+<img src=refimages/level1.JPG" width="100">
