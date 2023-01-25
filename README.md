@@ -1,5 +1,5 @@
 # SpaceRocketGame-Unity3D
-Purpose is to reach the other planet while avoiding obstacles (asteroids and moving walls) also keeping fuel level above zero. <br>
+Purpose is to reach the other planet while avoiding moving obstacles (asteroids and walls) also keeping fuel level above zero. <br>
 - There are 8 levels. 
 - Gameover if player hits obstacles or rocket's fuel go below zero.
 - Player rocket can move in 3D except three levels designed for 2D (X-Y) movement.
