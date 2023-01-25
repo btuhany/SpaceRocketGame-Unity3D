@@ -7,8 +7,8 @@ Purpose is to reach the other planet while avoiding obstacles (asteroids and mov
 - To make player stay in the boundary limits, I added a script that checks the player position. If player goes out the limits, fuel starts to decrease with a faster speed until the player comes the boundary limits.
 
 <img src="refimages/level1.JPG" width="500" > <br>
-<img src="refimages/level2.JPG" width="500" >
-<img src="refimages/level3.JPG" width="500" > <img src="refimages/level4.JPG" width="500" >
+<img src="refimages/level2.JPG" width="500" > <img src="refimages/level3.JPG" width="500" > <img src="refimages/level4.JPG" width="500" >
+
 
 <img src="refimages/level5.JPG" width="500" >
 <img src="refimages/level6.JPG" width="500" >
